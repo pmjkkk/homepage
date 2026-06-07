@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMJ.ONE</title>
+<style>
+  /* esim-tracker design system — compact */
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --border: #e5e5e5;
+    --text: #171717;
+    --text-2: #737373;
+    --text-3: #a3a3a3;
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    --s: 6px;
+    --m: 12px;
+    --l: 18px;
+    --max-w: 440px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font: 14px/1.45 var(--font);
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    padding: var(--m);
+    min-height: 100vh;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  .container { max-width: var(--max-w); margin: 0 auto; }
+
+  .header { margin-bottom: var(--l); padding-bottom: var(--m); border-bottom: 1px solid var(--border); }
+  .header h1 { font-size: 26px; font-weight: 900; letter-spacing: -0.02em; }
+  .vibe-tag {
+    display: inline-block;
+    margin-top: 2px;
+    background: var(--text);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 3px;
+    transform: skewX(-9deg);
+  }
+  .vibe-tag > span {
+    display: inline-block;
+    transform: skewX(9deg);
+    letter-spacing: .3px;
+  }
+
+  .section { margin-bottom: var(--l); }
+  .section-title { font-size: 13px; font-weight: 600; margin-bottom: var(--s); }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    border: 1px solid var(--border);
+    padding: 2px 9px;
+    font-size: 12px;
+    color: var(--text-2);
+  }
+
+  .cards { display: flex; flex-direction: column; gap: var(--s); }
+  .card {
+    display: flex;
+    align-items: center;
+    gap: var(--m);
+    padding: var(--s) var(--m);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: border-color 0.15s ease;
+  }
+  .card:hover { border-color: var(--text-3); }
+  .card .icon {
+    width: 30px; height: 30px;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0;
+    color: var(--text-2);
+  }
+  .card h3 { font-size: 14px; font-weight: 600; }
+  .card p { font-size: 12px; color: var(--text-3); margin-top: 1px; }
+
+  .links { display: flex; flex-wrap: wrap; gap: var(--s); }
+  .links a {
+    border: 1px solid var(--border);
+    padding: 4px 11px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .links a:hover { border-color: var(--text-3); background: var(--surface); }
+
+  .footer { margin-top: var(--l); padding-top: var(--m); border-top: 1px solid var(--border); font-size: 11px; color: var(--text-3); }
+
+  @media (max-width: 520px) {
+    .header h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <h1>PMJ.ONE</h1>
+    <span class="vibe-tag"><span>Vibe Coding</span></span>
+  </header>
+
+  <section class="section" aria-labelledby="skills-title">
+    <p class="section-title" id="skills-title">技能</p>
+    <div class="tags">
+      <span class="tag">TypeScript</span>
+      <span class="tag">React</span>
+      <span class="tag">Next.js</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Shell</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Docker</span>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="projects-title">
+    <p class="section-title" id="projects-title">项目</p>
+    <div class="cards">
+      <a href="https://github.com/pmjkkk/telegram-bot" target="_blank" rel="noreferrer" class="card">
+        <span class="icon" aria-hidden="true">✉</span>
+        <div>
+          <h3>telegram-bot</h3>
+          <p>Telegram 机器人</p>
+        </div>
+      </a>
+      <a href="https://github.com/pmjkkk/esim-tracker" target="_blank" rel="noreferrer" class="card">
+        <span class="icon" aria-hidden="true">☎</span>
+        <div>
+          <h3>esim-tracker</h3>
+          <p>eSIM 保号面板</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="links-title">
+    <p class="section-title" id="links-title">链接</p>
+    <nav class="links" aria-label="外部链接">
+      <a href="https://blog.pmj.one" target="_blank" rel="noreferrer">博客</a>
+      <a href="https://esim-tracker.pmj.one" target="_blank" rel="noreferrer">eSIM 保号面板</a>
+      <a href="https://basic-english.pmj.one" target="_blank" rel="noreferrer">基础英语</a>
+    </nav>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; PMJ.ONE</p>
+  </footer>
+</div>
+
+</body>
+</html>
